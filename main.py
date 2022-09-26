@@ -41,8 +41,6 @@ while player == False:
             print('You lose!', computer, 'cuts', player)
         else:
             print('You win', player, 'covers', computer)     
-    #else:
-        #print('Not a valid Play - check your input') # if input arg does not meet any of the criteria then we print this
     player = False # To continue the game after first try we set the player value back to False
     computer = play_option[randint(0,2)] # update the computer value
 
