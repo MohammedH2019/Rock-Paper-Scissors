@@ -18,6 +18,7 @@ def input_check(player_input):
             print("Not a valid Play - check your input'")
 
 
+
 # By default set the Player to False. I.e we will only exist the loop when the player is set to True
 player = False
 while player == False:
@@ -40,9 +41,14 @@ while player == False:
         if computer == 'Scissors':
             print('You lose!', computer, 'cuts', player)
         else:
-            print('You win', player, 'covers', computer)     
-    player = False # To continue the game after first try we set the player value back to False
-    computer = play_option[randint(0,2)] # update the computer value
+            print('You win', player, 'covers', computer) 
+    replay = input('Do you want to play again, Yes or No ?')
+    if replay == 'Yes' or replay == 'yes': # only play again if user inputs yes or Yes
+       player = False # To continue the game after first try we set the player value back to False
+       computer = play_option[randint(0,2)] # update the computer value
+    else: # else break out of the game   
+        break  # else break out of the game      
+
 
 
              
